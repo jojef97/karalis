@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { IBM_Plex_Serif} from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,11 +20,17 @@ export const metadata: Metadata = {
   description: "BIM coordination, VDC, and digital delivery consulting.",
 };
 
+const ibmPlexSerif = IBM_Plex_Serif({
+  variable: "--font-ibm-plex-serif",
+  subsets: ["latin"],
+  weight: ["400", "700"]
+});
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${ibmPlexSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />

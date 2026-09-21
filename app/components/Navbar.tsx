@@ -1,19 +1,24 @@
+"use client";
+import { usePathname } from "next/navigation"; /*For the underline on navrbar*/
 import './Navbar.css';
+import Link from "next/link";
 
 export default function Navbar() {
+    const pathname = usePathname();
     return(
         <nav className="Navbar">
             <div className="logo-container">
                 <img src="/Bk_Logo.png" alt="Logo" />
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Sectors</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Insights</a></li>
-                <li><a href="#">Contact</a></li>
+
+            <li><Link href="/"className={pathname === "/" ? "active" : ""}>Home</Link></li>
+            <li><Link href="/services"className={pathname === "/services" ? "active" : ""}>Services</Link></li>
+            <li><Link href="/Sectors"className={pathname === "/sectors" ? "active" : ""}>Sectors</Link></li>
+            <li><Link href="/Projects"className={pathname === "/projects" ? "active" : ""}>Projects</Link></li>
+            <li><Link href="/About"className={pathname === "/about" ? "active" : ""}>About</Link></li>
+            <li><Link href="/Insights"className={pathname === "/insights" ? "active" : ""}>Insights</Link></li>
+            <li><Link href="/Contact"className={pathname === "/contact" ? "active" : ""}>Contact</Link></li>
                 
             </ul>
         </nav>

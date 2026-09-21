@@ -1,0 +1,26 @@
+.tile {
+  font-size: 1.5rem;
+  font-family: var(--font-ibm-plex-serif);
+  display: block;
+  border: 2px solid #00000039;
+  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.169);
+  color: rgb(0, 0, 0);
+  aspect-ratio: 3/0.8;
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 140px 40px 40px;
+  background-color: rgba(21, 20, 20, 0.107);
+  background-image: url('/marble.jpg');
+  background-size: 70%;
+}

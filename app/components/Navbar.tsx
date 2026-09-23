@@ -13,7 +13,7 @@ export default function Navbar() {
             <ul>
 
             <li><Link href="/"className={pathname === "/" ? "active" : ""}>Home</Link></li>
-            <li><Link href="/services"className={pathname === "/services" ? "active" : ""}>Services</Link></li>
+            <li><Link href="/services"className={pathname.startsWith("/services") ? "active" : ""}>Services</Link></li>
             <li><Link href="/Sectors"className={pathname === "/sectors" ? "active" : ""}>Sectors</Link></li>
             <li><Link href="/Projects"className={pathname === "/projects" ? "active" : ""}>Projects</Link></li>
             <li><Link href="/About"className={pathname === "/about" ? "active" : ""}>About</Link></li>

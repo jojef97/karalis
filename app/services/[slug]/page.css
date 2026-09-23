@@ -1,0 +1,65 @@
+.category-page h1,
+.category-page h2,
+.category-page p {
+  font-family: var(--font-ibm-plex-serif);
+  color: black;
+}
+
+.category-page {
+  background-image: url('/plant.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 100px 30px;
+}
+
+.category-page h1{
+    font-size: 2rem;
+    
+    
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;  
+  gap: 40px;
+  
+}
+
+.service-list {
+  display: block;
+  margin-top: 100;
+  padding: 0;
+  width: 500px;
+    
+}
+
+.service-list li {
+  cursor: pointer;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+}
+
+.service-list li.active {
+  color: #187d35;
+}
+
+.service-list h2 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.content-panel {
+  width: 40%;
+  background-color: rgba(255, 255, 255, 0.183);
+  border: 1px solid rgba(0, 0, 0, 0.062) ;
+  padding: 24px;
+  margin-top: 100px;     
+  border-radius: 16px;
+  
+
+  font-size: large;
+  font-family: var(--font-ibm-plex-serif);
+  
+  
+}

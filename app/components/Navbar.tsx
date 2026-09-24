@@ -14,10 +14,8 @@ export default function Navbar() {
 
             <li><Link href="/"className={pathname === "/" ? "active" : ""}>Home</Link></li>
             <li><Link href="/services"className={pathname.startsWith("/services") ? "active" : ""}>Services</Link></li>
-            <li><Link href="/Sectors"className={pathname === "/sectors" ? "active" : ""}>Sectors</Link></li>
+            <li><Link href="/sectors"className={pathname === "/sectors" ? "active" : ""}>Sectors</Link></li>
             <li><Link href="/Projects"className={pathname === "/projects" ? "active" : ""}>Projects</Link></li>
-            <li><Link href="/About"className={pathname === "/about" ? "active" : ""}>About</Link></li>
-            <li><Link href="/Insights"className={pathname === "/insights" ? "active" : ""}>Insights</Link></li>
             <li><Link href="/Contact"className={pathname === "/contact" ? "active" : ""}>Contact</Link></li>
                 
             </ul>

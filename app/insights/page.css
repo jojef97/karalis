@@ -1,0 +1,207 @@
+.insights-page {
+  background-color: rgba(254, 254, 254, 0.954);
+  padding: 140px 60px;
+  
+  
+}
+
+/* Main page title */
+.insights-page h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+
+.row{
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px; /* was 40px — more space between rows */
+  min-height: 400px; /* forces each row taller */
+  align-items: center;
+}
+
+
+
+
+.bubbles {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the two bubbles vertically as a group */
+  align-self: center;      /* Aligns the group to the center instead of stretching */
+  gap: 20px;               /* A fixed, consistent gap between bubble 1 and bubble 2 */
+  
+}
+
+.bubble {
+  color:black;
+  background-color: rgb(255, 255, 255);
+  border: 3px solid #33333300;
+  padding: 16px;
+  border-radius: 20px;
+}
+
+.bubble h2{
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: black; 
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: rgb(34, 69, 210);
+
+}
+
+/* Summary paragraph inside the bubble*/
+.bubble-summary {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black; 
+  margin-bottom: 8px;
+}
+
+.bubble-detail {
+  font-size: 1.2rem;
+  color:black;
+  line-height: 1.4rem;
+}
+
+
+.row-image {
+  flex: 1;
+  border: 0px solid #33333386;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  
+}
+
+.row-image img {
+  border-radius: 20px;
+}
+
+.closing-text {
+  background-color: rgba(249, 251, 253, 0.539);
+  font-weight: bold;
+  text-align: center;
+  max-width: 600px;
+  margin:3% auto;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #000000;
+  border: 0px solid #0808081d;
+  border-radius: 20px;
+
+  
+}
+
+/*------------------------------- Workflow Section ------------------------------------------------------*/
+.workflow-section {
+  margin-top: 100px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.workflow-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.workflow-grid {
+  display: flex;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.workflow-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Base White Workflow Bubbles */
+.workflow-bubble {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 24px;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.step-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(34, 69, 210);
+  background: #f0f4ff;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.workflow-bubble p {
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.wf-bg-2, .wf-bg-4, .wf-bg6, .wf-bg-1, .wf-bg-3, .wf-bg-5  {
+  background-color: #fafafa;
+}
+
+.closing-text2 {
+  background-color: rgba(249, 251, 253, 0.539);
+  font-weight: bold;
+  text-align: center;
+  max-width: 800px;
+  margin:2% auto;
+  padding: 30px;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: #000000;
+  border: 0px solid #08080818;
+  border-radius: 20px;
+}
+
+.closing-text3 {
+  background-color: rgba(249, 251, 253, 0.539);
+  font-weight: bold;
+  text-align: center;
+  max-width: 800px;
+  margin:2% auto;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: #000000;
+  border: 0px solid #08080818;
+  border-radius: 20px;
+  padding:1%;
+}
+
+.contact {
+  background-color: rgba(249, 251, 253, 0.539);
+  font-weight: bold;
+  text-align: center;
+  max-width: 200px;
+  margin:2% auto;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: #000000;
+  border: 0px solid #08080818;
+  border-radius: 20px;
+  padding:1%;
+}

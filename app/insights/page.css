@@ -160,7 +160,7 @@
   margin: 0;
 }
 
-.wf-bg-2, .wf-bg-4, .wf-bg6, .wf-bg-1, .wf-bg-3, .wf-bg-5  {
+.wf-bg-2, .wf-bg-4, .wf-bg-6, .wf-bg-1, .wf-bg-3, .wf-bg-5  {
   background-color: #fafafa;
 }
 
@@ -193,15 +193,23 @@
 }
 
 .contact {
+  display: block;
   background-color: rgba(249, 251, 253, 0.539);
   font-weight: bold;
   text-align: center;
   max-width: 200px;
-  margin:2% auto;
+  margin: 2% auto;
   font-size: 1.2rem;
   line-height: 1.3;
   color: #000000;
   border: 0px solid #08080818;
   border-radius: 20px;
-  padding:1%;
+  padding: 1%;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact:hover {
+  transform: scale(1.05);
+  background-color: rgba(249, 251, 253, 0.9);
 }

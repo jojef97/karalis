@@ -1,4 +1,5 @@
 import "./page.css";
+import Link from "next/link";
 
 export default function InsightsPage() {
   return (
@@ -131,7 +132,7 @@ export default function InsightsPage() {
         Ελέγχουµε το µοντέλο, λύνουµε τα clashes και σας παραδίδουµε προµέτρηση έτοιµη για τιµολόγηση.
         </p>
 
-        <p className="contact">Επικοινωνήστε μαζί μας.</p>
+        <Link href="/contact" className="contact">Επικοινωνήστε μαζί μας.</Link>
 </div>
   
   );

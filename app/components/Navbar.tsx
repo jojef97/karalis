@@ -1,16 +1,17 @@
 "use client";
 
-import { usePathname } from "next/navigation"; /*For the underline on navrbar*/
-
+import { useState } from "react";
+import { usePathname } from "next/navigation"; 
 import './Navbar.css';
-
-import Link from "next/link";
+import Link from "next/link"; 
+import { Menu, X } from "lucide-react"; 
 
 
 
 export default function Navbar() {
 
     const pathname = usePathname();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);  //Για Mobile, open close 
 
     return(
 
@@ -21,8 +22,9 @@ export default function Navbar() {
                 <img src="/Bk_Logo.png" alt="Logo" />
 
             </div>
+            
 
-            <ul>
+            <ul className="desktop-links">
 
 
 
@@ -42,7 +44,31 @@ export default function Navbar() {
 
             </ul>
 
-        </nav>
+
+        <div className="burger-icon" onClick={() =>setIsMenuOpen(!isMenuOpen)}>
+                    {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+         
+        </div>
+
+
+        {isMenuOpen && (
+            <div className="mobile-menu">
+
+                
+                
+
+    <ul>
+      <li><Link href="/"onClick={() => setIsMenuOpen(false)}>Home</Link></li>
+      <li><Link href="/services" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
+      <li><Link href="/sectors" onClick={() => setIsMenuOpen(false)}>Sectors</Link></li>
+      <li><Link href="/Projects" onClick={() => setIsMenuOpen(false)}>Projects</Link></li>
+      <li><Link href="/insights" onClick={() => setIsMenuOpen(false)}>Insights</Link></li>
+      <li><Link href="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
+    </ul>
+            </div>
+        
+        )}
+    </nav>
 
     )
 

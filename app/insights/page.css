@@ -18,8 +18,8 @@
 .row{
   display: flex;
   gap: 40px;
-  margin-bottom: 20px; /* was 40px — more space between rows */
-  min-height: 400px; /* forces each row taller */
+  margin-bottom: 20px; 
+  min-height: 400px; 
   align-items: center;
 }
 
@@ -32,7 +32,7 @@
   flex-direction: column;
   justify-content: center; /* Centers the two bubbles vertically as a group */
   align-self: center;      /* Aligns the group to the center instead of stretching */
-  gap: 20px;               /* A fixed, consistent gap between bubble 1 and bubble 2 */
+  gap: 20px;               
   
 }
 
@@ -53,8 +53,6 @@
   text-decoration-color: rgb(34, 69, 210);
 
 }
-
-/* Summary paragraph inside the bubble*/
 .bubble-summary {
   font-weight: bold;
   font-size: 1.2rem;
@@ -207,9 +205,54 @@
   padding: 1%;
   text-decoration: none;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgb(34, 69, 210);
 }
 
 .contact:hover {
   transform: scale(1.05);
   background-color: rgba(249, 251, 253, 0.9);
+}
+
+
+
+/*------------------------------- Mobile ------------------------------------------------------*/
+@media (max-width: 768px) {
+  .insights-page {
+    padding: 80px 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 30px;
+    min-height: auto;
+  }
+
+  .row-reverse {
+    flex-direction: column;
+  }
+
+  /* Skip/hide images on mobile view */
+  .row-image {
+    display: none;
+  }
+
+  /* Fix workflow grid to stack sequentially from 1 to 6 */
+  .workflow-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .workflow-col {
+    gap: 20px;
+  }
+}
+
+/* Ultra-small mobile adjustments (e.g., 320px screens) */
+@media (max-width: 480px) {
+  .insights-page {
+    padding: 80px 12px;
+  }
 }

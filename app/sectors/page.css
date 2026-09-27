@@ -25,13 +25,8 @@
   transition: background-color 0.3s ease; 
 
   background-color: transparent;
-  transition: background-color 0.3s ease, background-blend-mode 0.3s ease;
+  transition: background-color 0.3s ease;
   
-}
-
-.sector-tile:hover {
-  background-color: rgba(0, 0, 0, 0.75);
-  background-blend-mode: darken;
 }
 
 .title-chip {
@@ -41,8 +36,14 @@
   font-size: 1.8rem;
   text-underline-offset: 5px;
   text-decoration: underline;
-  text-underline-offset: 5px;
+}
 
+
+@media (hover: hover) and (pointer: fine) {              /*hover only in desktop*/
+  .sector-tile:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+  background-blend-mode: darken;
+}
 }
 
 
@@ -60,3 +61,44 @@
   opacity: 1;
 }
 
+
+/*-----------------------------------------Mobile--------------------------------------------*/
+
+@media (max-width: 768px) {
+  .sectors-grid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 80px 30px 0 30px; /* Adjust top padding for  navbar 60 */
+  }
+
+  .sector-tile {
+    height: calc(100vh - 250px);
+    margin: 16px;
+    text-align: center;
+    position: relative;
+  }
+
+  
+.sector-tile::before {     /*layer1*/
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); 
+  z-index: 1;
+}
+
+  .sector-tile p {
+    opacity: 1;
+    padding: 100px 20px 0;
+    text-align: left;
+    background-color: rgba(1, 0, 0, 0);
+    
+  }
+
+  .sector-tile .title-chip,           /*layer2*/
+  .sector-tile p {
+    position: relative;
+    z-index: 2;
+  }
+}

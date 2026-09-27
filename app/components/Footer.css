@@ -15,9 +15,15 @@ footer {
     text-align: center;
 }
 
+.footer-center span {      /* Fixes the icons on mobile*/
+  white-space: nowrap;
+}
+
 .footer-right {
     flex: 1;
     display: flex;
     justify-content: flex-end;
     gap: 15px;
 }
+
+

@@ -53,3 +53,12 @@
 }
 
 
+
+
+
+@media (max-width: 480px) {
+  .icon-box {
+    padding: 0px; 
+    
+  }
+}

@@ -3,6 +3,8 @@ import { useState, use } from "react";
 import { notFound } from "next/navigation";
 import { services } from "../data";
 import "./page.css";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 interface PageProps {
   params: Promise<{
@@ -24,6 +26,9 @@ export default function CategoryPage({ params }: PageProps) {
 
   return (
     <div className="category-page">
+      <Link href="/services" className="back-link">
+    <ArrowLeft size={24} />
+  </Link>
       <h1>{category.title}</h1>
       <div className="layout">
         <ul className="service-list">
@@ -34,6 +39,7 @@ export default function CategoryPage({ params }: PageProps) {
               className={openIndex === index ? "active" : ""}
             >
               <h2>{section.title}</h2>
+              <p className="item-text">{section.content}</p>
             </li>
           ))}
         </ul>

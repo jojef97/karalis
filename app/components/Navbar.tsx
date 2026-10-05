@@ -19,7 +19,9 @@ export default function Navbar() {
 
             <div className="logo-container">
 
-                <img src="/Bk_Logo.png" alt="Logo" />
+                <a href="/">
+                    <img src="/Bk_Logo.png" alt="Logo" />
+                </a>
 
             </div>
             
@@ -34,7 +36,7 @@ export default function Navbar() {
 
             <li><Link href="/sectors"className={pathname === "/sectors" ? "active" : ""}>Sectors</Link></li>
 
-            <li><Link href="/Projects"className={pathname === "/projects" ? "active" : ""}>Projects</Link></li>
+           {/* <li><Link href="/Projects"className={pathname === "/projects" ? "active" : ""}>Projects</Link></li> */}
 
             <li><Link href="/insights"className={pathname === "/insights" ? "active" : ""}>Insights</Link></li>
 
@@ -61,7 +63,7 @@ export default function Navbar() {
       <li><Link href="/"onClick={() => setIsMenuOpen(false)}>Home</Link></li>
       <li><Link href="/services" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
       <li><Link href="/sectors" onClick={() => setIsMenuOpen(false)}>Sectors</Link></li>
-      <li><Link href="/Projects" onClick={() => setIsMenuOpen(false)}>Projects</Link></li>
+      {/*<li><Link href="/Projects" onClick={() => setIsMenuOpen(false)}>Projects</Link></li> */}
       <li><Link href="/insights" onClick={() => setIsMenuOpen(false)}>Insights</Link></li>
       <li><Link href="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
     </ul>

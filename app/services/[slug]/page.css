@@ -97,9 +97,15 @@
   padding: 100px 20px 40px;
 }
 
+
   .layout {
     flex-direction: column;
   }
+
+  .item-text {
+  background-color:rgba(219, 228, 216, 0.651);
+  border-radius: 20px;
+}
 
   .service-list {
     width: 100%;

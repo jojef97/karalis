@@ -11,6 +11,9 @@ Marketing website for a BIM/VDC consulting firm (client project).
 - Reusable components (service tiles, navbar with active-route highlighting) and a responsive mobile menu.
 - Responsive layout: detail side panel on desktop, accordion on mobile.
 
+**Status:** Complete and deployed on Vercel. Awaiting the client's domain and launch.
+**Demo:** https://karalis.vercel.app
+
 ## Run locally
 
     npm install
@@ -18,4 +21,3 @@ Marketing website for a BIM/VDC consulting firm (client project).
 
 Then open http://localhost:3000.
 
-**Live:** https://your-vercel-url-here
